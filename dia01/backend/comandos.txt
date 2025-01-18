@@ -1,0 +1,8 @@
+terraform init
+terraform init -upgrade
+terraform plan
+terraform plan -out foo
+terraform apply "foo"
+terraform destroy
+terraform plan -destroy -out destruir
+terraform apply "destruir"
