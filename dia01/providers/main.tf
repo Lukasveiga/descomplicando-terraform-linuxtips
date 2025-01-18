@@ -23,14 +23,3 @@ resource "aws_instance" "web" {
     Env  = "Developer"
   }
 }
-
-resource "aws_instance" "webwest" {
-  provider      = aws.west
-  ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.micro"
-
-  tags = {
-    Name = "HelloWorld"
-    Env  = "Developer"
-  }
-}
