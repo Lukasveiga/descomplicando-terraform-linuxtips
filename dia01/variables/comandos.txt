@@ -1,0 +1,14 @@
+terraform:
+terraform init
+terraform init -upgrade
+terraform plan
+terraform plan -out foo
+terraform apply "foo"
+terraform destroy
+terraform plan -destroy -out destruir
+terraform apply "destruir"
+terraform plan -out plano -var="image_id=ami-abc123"
+terraform plan -out plano -var-file="testing.tfvars"
+
+others:
+export TF_VAR_image_id=ami-abc123
