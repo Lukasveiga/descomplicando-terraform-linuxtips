@@ -1,0 +1,29 @@
+terraform:
+terraform init
+terraform init -upgrade
+terraform plan
+terraform plan -out foo
+terraform apply "foo"
+terraform destroy
+terraform plan -destroy -out destruir
+terraform apply "destruir"
+terraform plan -out plano -var="image_id=ami-abc123"
+terraform plan -out plano -var-file="testing.tfvars"
+terraform state -help
+terraform state list
+terraform state show data.aws_ami.ubuntu
+terraform state pull > state.json
+terraform state pull | jq .
+terraform state pull | jq .resources
+terraform state push (WARNNING)
+terraform plan -out plano -lock=false
+terraform workspace list
+terraform workspace -help
+terraform workspace new production
+terraform workspace select default
+terraform state pull > state.tfstate
+terraform import aws_instance.web i-074b5dc60aec43daf
+terraform state rm aws_instance.web
+
+others:
+export TF_VAR_image_id=ami-abc123
